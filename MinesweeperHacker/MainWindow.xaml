@@ -1,0 +1,27 @@
+﻿<Window x:Class="MinesweeperHacker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MineAssist" Height="545" Width="700" KeyDown="Window_KeyDown" Icon="MineSweeper.ico">
+    <Grid>
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Top">Point at upper left and press 1.  Point at bottom right  and press 2.</TextBlock>
+            <TextBlock DockPanel.Dock="Top" Name="TBtopLeft">Top left: [unassigned]</TextBlock>
+            <TextBlock DockPanel.Dock="Top" Name="TBbottomRight">Bottom right: [unassigned]</TextBlock>
+            <TextBlock DockPanel.Dock="Top" Visibility="Collapsed">Delay time:</TextBlock>
+            <TextBox DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Name="TBXdelayTime" Visibility="Collapsed">50</TextBox>
+            <StackPanel DockPanel.Dock="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button Width="100px" Click="Beginner_Click">Beginner</Button>
+                <Button Width="100px" Click="Intermediate_Click">Intermediate</Button>
+                <Button Width="100px" Click="Advanced_Click">Advanced</Button>
+            </StackPanel>
+            <Button DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Click="ReadScreen_Click">Read Screen</Button>
+
+            <Button DockPanel.Dock="Top" Width="100px" HorizontalAlignment="Left" Name="BNbegin" Click="BNbegin_Click">Begin</Button>
+            <Border BorderBrush="Black" BorderThickness="2" SnapsToDevicePixels="True">
+                <Viewbox Name="mineGridHolder" Margin="1">
+
+                </Viewbox>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Window>
